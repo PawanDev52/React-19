@@ -1,12 +1,14 @@
-import Header from "./Header";
-function Apple() {
+function App() {
   return (
     <div>
-      <Header />
-      <h1>Hello</h1>
-      <h1>code with me</h1>
+      <h1>First Component</h1>
+      <Fruit />
     </div>
   );
 }
 
-export default Apple;
+function Fruit() {
+  return <h1>Apple</h1>;
+}
+
+export default App;
