@@ -87,20 +87,23 @@ import ToDo from "./ToDo";
 // }
 
 // click event & functions
-function App() {
-  function callFun() {
-    alert("function called inner");
-  }
-  const fruit = (name) => {
-    alert(name);
-  };
-  return (
-    <div>
-      <h1>Events and Functions</h1>
-      <button onClick={() => callFun()}>Apple</button>
-      <button onClick={() => fruit("orange")}>Orange</button>
-    </div>
-  );
-}
+// function App() {
+//   function callFun() {
+//     alert("function called inner");
+//   }
+//   const fruit = (name) => {
+//     alert(name);
+//   };
+//   return (
+//     <div>
+//       <h1>Events and Functions</h1>
+//       <button onClick={() => callFun()}>Apple</button>
+//       <button onClick={() => fruit("orange")}>Orange</button>
+//     </div>
+//   );
+// }
+
+// state
+
 
 export default App;
