@@ -106,19 +106,67 @@ import ToDo from "./ToDo";
 // state
 import { useState } from "react";
 import Counter from "./Counter";
+import User from "./User";
+// function App() {
+//   const [fruit, setFruit] = useState("Apple");
+//   const handleFruit = () => {
+//     setFruit("Banana");
+//   };
+//   return (
+//     <div>
+//       <h1>State in React Js</h1>
+//       <h1>{fruit}</h1>
+//       <button onClick={handleFruit}>Change Fruit Name</button>
+//       <Counter />
+//     </div>
+//   );
+// }
+
+// state toggle
+// function App() {
+//   const [display, setDisplay] = useState(false);
+//   const [age, setAge] = useState(16);
+
+//   return (
+//     <div>
+//       <h1>Toggle in React JS</h1>
+//       <button onClick={() => setDisplay(!display)}>Hide/Show</button>
+
+//       {/* {display ? <h1>Developer</h1> : null} */}
+
+//       {display ? <User /> : null}
+
+//       <button onClick={() => setAge(age + 2)}>Check Age</button>
+
+//       {age == 18 ? (
+//         <h1>you are 18</h1>
+//       ) : age < 18 ? (
+//         <h1>You are below 18</h1>
+//       ) : (
+//         <h1>you are above 18</h1>
+//       )}
+//     </div>
+//   );
+// }
+
+// else if condition
 function App() {
-  const [fruit, setFruit] = useState("Apple");
-  const handleFruit = () => {
-    setFruit("Banana");
-  };
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <h1>State in React Js</h1>
-      <h1>{fruit}</h1>
-      <button onClick={handleFruit}>Change Fruit Name</button>
-      <Counter />
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Counter</button>
+      {
+        count == 0 ? <h1>Condition 0</h1>
+          : count == 1 ? <h1>Condition 1</h1>
+            : count == 2 ? <h1>Condition 2</h1>
+              : count == 3 ? <h1>Condition 3</h1>
+                : count == 4 ? <h1>Condition 4</h1>
+                  : count == 5 ? <h1>Condition 5</h1>
+                    : <h1>Other Condition</h1>
+      }
     </div>
-  );
+  )
 }
 
 export default App;
