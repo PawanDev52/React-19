@@ -171,13 +171,15 @@ import PropComponent from "./PropComponent";
 // }
 
 // props
-function App() {
-  return (
-    <div>
-      <h1>Props in React JS</h1>
-      <PropComponent name="peter" age={25} email="peter@test.com" />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <h1>Props in React JS</h1>
+//       <PropComponent name="peter" age={25} email="peter@test.com" />
+//     </div>
+//   );
+// }
+
+// props with
 
 export default App;
