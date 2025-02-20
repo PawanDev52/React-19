@@ -108,6 +108,7 @@ import { useState } from "react";
 import Counter from "./Counter";
 import User from "./User";
 import PropComponent from "./PropComponent";
+import College from "./College";
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
 //   const handleFruit = () => {
@@ -185,28 +186,37 @@ import PropComponent from "./PropComponent";
 // }
 
 // props with object
+// function App() {
+//   let userObject = {
+//     name: "Peter",
+//     age: 24,
+//     email: "peter@test.com",
+//   };
+//   let userObject1 = {
+//     name: "Sam",
+//     age: 26,
+//     email: "sam@test.com",
+//   };
+//   let userObject2 = {
+//     name: "Joy",
+//     age: 28,
+//     email: "joy@test.com",
+//   };
+//   return (
+//     <div>
+//       <h1>Props in React JS</h1>
+//       <PropComponent user={userObject} />
+//       <PropComponent user={userObject1} />
+//       <PropComponent user={userObject2} />
+//     </div>
+//   );
+// }
+
+// Props with array
 function App() {
-  let userObject = {
-    name: "Peter",
-    age: 24,
-    email: "peter@test.com",
-  };
-  let userObject1 = {
-    name: "Sam",
-    age: 26,
-    email: "sam@test.com",
-  };
-  let userObject2 = {
-    name: "Joy",
-    age: 28,
-    email: "joy@test.com",
-  };
   return (
     <div>
-      <h1>Props in React JS</h1>
-      <PropComponent user={userObject} />
-      <PropComponent user={userObject1} />
-      <PropComponent user={userObject2} />
+      <College />
     </div>
   );
 }
