@@ -172,14 +172,25 @@ import PropComponent from "./PropComponent";
 
 // props
 // function App() {
+//   let name = "peter";
+//   let age = 26;
+//   let email = "peter@test.com";
 //   return (
 //     <div>
 //       <h1>Props in React JS</h1>
-//       <PropComponent name="peter" age={25} email="peter@test.com" />
+//       {/* <PropComponent name="peter" age={25} email="peter@test.com" /> */}
+//       <PropComponent name={name} age={age} email={email} />
 //     </div>
 //   );
 // }
 
-// props with
+// props with object
+function App() {
+  return (
+    <div>
+      <h1>Props in React JS</h1>
+    </div>
+  );
+}
 
 export default App;
