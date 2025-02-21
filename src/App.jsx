@@ -108,7 +108,7 @@ import { useState } from "react";
 import Counter from "./Counter";
 import User from "./User";
 import PropComponent from "./PropComponent";
-import College from "./College";
+import College, { Student } from "./College";
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
 //   const handleFruit = () => {
@@ -213,10 +213,24 @@ import College from "./College";
 // }
 
 // Props with array
+// function App() {
+//   let collegeNames = ["iitm", "dgit", "du", "nit"];
+//   return (
+//     <div>
+//       <h1>Props in React JS</h1>
+//       <College name={collegeNames[0]} />
+//     </div>
+//   );
+// }
+
+// props with array with button click
 function App() {
+  const [student, setStudent] = useState();
   return (
     <div>
-      <College />
+      <h1>Props in React</h1>
+      {student && <Student name={student} />}
+      <button onClick={() => setStudent("Sandy")}>Update Name</button>
     </div>
   );
 }
