@@ -109,6 +109,7 @@ import Counter from "./Counter";
 import User from "./User";
 import PropComponent from "./PropComponent";
 import College, { Student } from "./College";
+import Users from "./Users";
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
 //   const handleFruit = () => {
@@ -224,13 +225,23 @@ import College, { Student } from "./College";
 // }
 
 // props with array with button click
+// function App() {
+//   const [student, setStudent] = useState();
+//   return (
+//     <div>
+//       <h1>Props in React</h1>
+//       {student && <Student name={student} />}
+//       <button onClick={() => setStudent("Sandy")}>Update Name</button>
+//     </div>
+//   );
+// }
+
+// jsx with props
 function App() {
-  const [student, setStudent] = useState();
   return (
     <div>
-      <h1>Props in React</h1>
-      {student && <Student name={student} />}
-      <button onClick={() => setStudent("Sandy")}>Update Name</button>
+      <h1>Props in React Js</h1>
+      <Users />
     </div>
   );
 }
