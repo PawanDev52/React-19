@@ -110,6 +110,8 @@ import User from "./User";
 import PropComponent from "./PropComponent";
 import College, { Student } from "./College";
 import Users from "./Users";
+import Wrapper from "./Wrapper";
+
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
 //   const handleFruit = () => {
@@ -241,7 +243,22 @@ function App() {
   return (
     <div>
       <h1>Props in React Js</h1>
+      <Users name="Sanjay" />
+      <Users name="Jack" />
       <Users />
+      <hr />
+      <Wrapper color="orange">
+        <h1>Hello Everyone</h1>
+      </Wrapper>
+
+      <Wrapper color="brown">
+        <h1>Hello User</h1>
+      </Wrapper>
+
+      <Wrapper>
+        <h1>Hello Admin</h1>
+        <h2 style={{ color: "blue" }}>Please Login</h2>
+      </Wrapper>
     </div>
   );
 }

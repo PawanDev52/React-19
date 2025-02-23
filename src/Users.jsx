@@ -1,7 +1,7 @@
-function Users() {
+function Users({ name = "Default Value" }) {
   return (
     <div>
-      <h1>User Component</h1>
+      <h1>Hello, {name} </h1>
     </div>
   );
 }
