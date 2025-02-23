@@ -111,6 +111,7 @@ import PropComponent from "./PropComponent";
 import College, { Student } from "./College";
 import Users from "./Users";
 import Wrapper from "./Wrapper";
+import Skills from "./Skills";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -283,39 +284,46 @@ import Wrapper from "./Wrapper";
 // }
 
 // practice question
+// function App() {
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [passwd, setPasswd] = useState("");
+//   return (
+//     <div>
+//       <h1>Get Input Field Data</h1>
+//       <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder="Enter name" />
+//       <br /><br />
+//       <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Enter email" />
+//       <br /><br />
+//       <input onChange={(e) => setPasswd(e.target.value)} value={passwd} type="password" placeholder="Enter password" />
+//       <br /><br />
+//       <button>Submit</button>
+
+//       <button
+//         onClick={() => {
+//           setName("");
+//           setEmail("");
+//           setPasswd("");
+//         }}
+//       >
+//         Clear
+//       </button>
+
+//       <h3>{name}</h3>
+//       <h3>{email}</h3>
+//       <h3>{passwd}</h3>
+//     </div>
+//   );
+// }
+
+// Handle check boxes
 function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [passwd, setPasswd] = useState("");
   return (
     <div>
-      <h1>Get Input Field Data</h1>
-      <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder="Enter name" />
-      <br /><br />
-      <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Enter email" />
-      <br /><br />
-      <input onChange={(e) => setPasswd(e.target.value)} value={passwd} type="password" placeholder="Enter password" />
-      <br /><br />
-      <button>Submit</button>
-
-      <button
-        onClick={() => {
-          setName("");
-          setEmail("");
-          setPasswd("");
-        }}
-      >
-        Clear
-      </button>
-
-      <h3>{name}</h3>
-      <h3>{email}</h3>
-      <h3>{passwd}</h3>
+      <h1>Handle Checkbox in React JS</h1>
+      <Skills />
     </div>
   );
 }
-
-// Handle check boxes
-
 
 export default App;
