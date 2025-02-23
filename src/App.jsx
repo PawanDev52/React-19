@@ -239,28 +239,83 @@ import Wrapper from "./Wrapper";
 // }
 
 // jsx with props
+// function App() {
+//   return (
+//     <div>
+//       <h1>Props in React Js</h1>
+//       <Users name="Sanjay" />
+//       <Users name="Jack" />
+//       <Users />
+//       <hr />
+//       <Wrapper color="orange">
+//         <h1>Hello Everyone</h1>
+//       </Wrapper>
+
+//       <Wrapper color="brown">
+//         <h1>Hello User</h1>
+//       </Wrapper>
+
+//       <Wrapper>
+//         <h1>Hello Admin</h1>
+//         <h2 style={{ color: "blue" }}>Please Login</h2>
+//       </Wrapper>
+//     </div>
+//   );
+// }
+
+// get input value
+// function App() {
+//   const [val, setVal] = useState("Peter");
+//   return (
+//     <div>
+//       <h1>Get Input Field Value</h1>
+//       {/* <input onChange={(event)=> console.log(event.target.value)} type="text" placeholder="Enter user name" /> */}
+//       <input
+//         onChange={(event) => setVal(event.target.value)}
+//         value={val}
+//         type="text"
+//         placeholder="Enter user name"
+//       />
+//       <h1>Input value: {val}</h1>
+//       <button onClick={() => setVal("")}>Clear value</button>
+//     </div>
+//   );
+// }
+
+// practice question
 function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [passwd, setPasswd] = useState("");
   return (
     <div>
-      <h1>Props in React Js</h1>
-      <Users name="Sanjay" />
-      <Users name="Jack" />
-      <Users />
-      <hr />
-      <Wrapper color="orange">
-        <h1>Hello Everyone</h1>
-      </Wrapper>
+      <h1>Get Input Field Data</h1>
+      <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder="Enter name" />
+      <br /><br />
+      <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Enter email" />
+      <br /><br />
+      <input onChange={(e) => setPasswd(e.target.value)} value={passwd} type="password" placeholder="Enter password" />
+      <br /><br />
+      <button>Submit</button>
 
-      <Wrapper color="brown">
-        <h1>Hello User</h1>
-      </Wrapper>
+      <button
+        onClick={() => {
+          setName("");
+          setEmail("");
+          setPasswd("");
+        }}
+      >
+        Clear
+      </button>
 
-      <Wrapper>
-        <h1>Hello Admin</h1>
-        <h2 style={{ color: "blue" }}>Please Login</h2>
-      </Wrapper>
+      <h3>{name}</h3>
+      <h3>{email}</h3>
+      <h3>{passwd}</h3>
     </div>
   );
 }
+
+// Handle check boxes
+
 
 export default App;
