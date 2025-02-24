@@ -327,45 +327,100 @@ import Skills from "./Skills";
 // }
 
 // Handle radio and dropdown
+// function App() {
+//   const [gender, setGender] = useState("female");
+//   const [city, setCity] = useState("delhi");
+//   return (
+//     <div>
+//       <h1>Handle Radio and Dropdown</h1>
+//       <h4>Select Gender</h4>
+//       <input
+//         type="radio"
+//         onChange={(event) => setGender(event.target.value)}
+//         checked={gender == "male"}
+//         name="gender"
+//         value={"male"}
+//         id="male"
+//       />
+//       <label htmlFor="male">Male</label>
+//       <input
+//         type="radio"
+//         onChange={(event) => setGender(event.target.value)}
+//         checked={gender == "female"}
+//         name="gender"
+//         value={"female"}
+//         id="female"
+//       />
+//       <label htmlFor="female">Female</label>
+//       <h2>Selected Gender: {gender}</h2>
+//       <br />
+
+//       <h4>Select City</h4>
+//       <select
+//         onChange={(event) => setCity(event.target.value)}
+//         defaultValue={"delhi"}
+//       >
+//         <option value="noida">Noida</option>
+//         <option value="gurgaon">Gurgaon</option>
+//         <option value="delhi">Delhi</option>
+//         <option value="pune">Pune</option>
+//       </select>
+//       <h2>Selected City: {city}</h2>
+//     </div>
+//   );
+// }
+
+// Loop in jsx
 function App() {
-  const [gender, setGender] = useState("female");
-  const [city, setCity] = useState("delhi");
+  const userData = [
+    {
+      name: "Sandy",
+      age: "26",
+      email: "sandy@test.com",
+      id: 1,
+    },
+    {
+      name: "Henry",
+      age: "28",
+      email: "henry@test.com",
+      id: 2,
+    },
+    {
+      name: "Peter",
+      age: "32",
+      email: "peter@test.com",
+      id: 3,
+    },
+    {
+      name: "Mate",
+      age: "21",
+      email: "mate@test.com",
+      id: 4,
+    },
+  ];
   return (
     <div>
-      <h1>Handle Radio and Dropdown</h1>
-      <h4>Select Gender</h4>
-      <input
-        type="radio"
-        onChange={(event) => setGender(event.target.value)}
-        checked={gender == "male"}
-        name="gender"
-        value={"male"}
-        id="male"
-      />
-      <label htmlFor="male">Male</label>
-      <input
-        type="radio"
-        onChange={(event) => setGender(event.target.value)}
-        checked={gender == "female"}
-        name="gender"
-        value={"female"}
-        id="female"
-      />
-      <label htmlFor="female">Female</label>
-      <h2>Selected Gender: {gender}</h2>
-      <br />
-
-      <h4>Select City</h4>
-      <select
-        onChange={(event) => setCity(event.target.value)}
-        defaultValue={"delhi"}
-      >
-        <option value="noida">Noida</option>
-        <option value="gurgaon">Gurgaon</option>
-        <option value="delhi">Delhi</option>
-        <option value="pune">Pune</option>
-      </select>
-      <h2>Selected City: {city}</h2>
+      <h1>Loop in JSX with Map funciton</h1>
+      <table border={1}>
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Email</td>
+          </tr>
+        </thead>
+        <tbody>
+          {userData.map((user) => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.age}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
