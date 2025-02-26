@@ -112,6 +112,7 @@ import College, { Student } from "./College";
 import Users from "./Users";
 import Wrapper from "./Wrapper";
 import Skills from "./Skills";
+import UserData from "./UserData";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -371,6 +372,61 @@ import Skills from "./Skills";
 // }
 
 // Loop in jsx
+// function App() {
+//   const userData = [
+//     {
+//       name: "Sandy",
+//       age: "26",
+//       email: "sandy@test.com",
+//       id: 1,
+//     },
+//     {
+//       name: "Henry",
+//       age: "28",
+//       email: "henry@test.com",
+//       id: 2,
+//     },
+//     {
+//       name: "Peter",
+//       age: "32",
+//       email: "peter@test.com",
+//       id: 3,
+//     },
+//     {
+//       name: "Mate",
+//       age: "21",
+//       email: "mate@test.com",
+//       id: 4,
+//     },
+//   ];
+//   return (
+//     <div>
+//       <h1>Loop in JSX with Map funciton</h1>
+//       <table border={1}>
+//         <thead>
+//           <tr>
+//             <td>Id</td>
+//             <td>Name</td>
+//             <td>Age</td>
+//             <td>Email</td>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {userData.map((user) => (
+//             <tr key={user.id}>
+//               <td>{user.id}</td>
+//               <td>{user.name}</td>
+//               <td>{user.age}</td>
+//               <td>{user.email}</td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// }
+
+// Reuse component in loop
 function App() {
   const userData = [
     {
@@ -400,27 +456,12 @@ function App() {
   ];
   return (
     <div>
-      <h1>Loop in JSX with Map funciton</h1>
-      <table border={1}>
-        <thead>
-          <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Age</td>
-            <td>Email</td>
-          </tr>
-        </thead>
-        <tbody>
-          {userData.map((user) => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.age}</td>
-              <td>{user.email}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h1>Reuse Component in Loop</h1>
+      {userData.map((user) => (
+        <div key={user.id}>
+          <UserData data={user} />
+        </div>
+      ))}
     </div>
   );
 }
