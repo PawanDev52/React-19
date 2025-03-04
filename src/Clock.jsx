@@ -1,37 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function Clock() {
-  const d = new Date();
+function Clock({ color, bgColor }) {
+  const [time, setTime] = useState(new Date());
+  useEffect(() => {
+    const tm = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(tm);
+  }, []);
   return (
-    <div>
-      <div
-        style={{
-          background: "green",
-          padding: "15px",
-          borderRadius: "10px",
-          width: "150px",
-          fontSize: "32px",
-          fontWeight: "700",
-        }}
-      >
-        <span>{d.getHours()}</span> : <span>{d.getMinutes()}</span> :{" "}
-        <span>{d.getSeconds()}</span>
-      </div>
-    </div>
-  );
-}
-
-export function ClockColor() {
-  const [colorBg, setColorBg] = useState("green");
-  return (
-    <div>
-      <select onChange={(e) => setColorBg(e.target.value)} defaultValue="green">
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-        <option value="orange">Orange</option>
-      </select>
-      <h3>{colorBg}</h3>
+    <div
+      style={{
+        color: color,
+        background: bgColor,
+        width: "200px",
+        padding: "15px",
+        fontSize: "36px",
+        borderRadius: "20px",
+        marginTop: "20px",
+        textAlign: "center",
+        fontWeight: "bold",
+      }}
+    >
+      {time.toLocaleTimeString()}
     </div>
   );
 }

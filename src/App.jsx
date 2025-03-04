@@ -113,7 +113,7 @@ import Users from "./Users";
 import Wrapper from "./Wrapper";
 import Skills from "./Skills";
 import UserData from "./UserData";
-import Clock, { ClockColor } from "./Clock";
+import Clock from "./Clock";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -469,11 +469,26 @@ import Clock, { ClockColor } from "./Clock";
 
 // Practice Question - props
 function App() {
+  const [color, setColor] = useState("green");
+  const [bgColor, setBgColor] = useState("red");
   return (
     <div>
-      <ClockColor />
-      <br />
-      <Clock />
+      <span>Pick A Color: </span>
+      <select value={color} onChange={(e) => setColor(e.target.value)}>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+      </select>
+      <br /> <br />
+      <span>Pick A Background Color: </span>
+      <select value={bgColor} onChange={(e) => setBgColor(e.target.value)}>
+        <option value="red">Red</option>
+        <option value="brown">Brown</option>
+        <option value="pink">Pink</option>
+        <option value="purple">Purple</option>
+      </select>
+      <Clock color={color} bgColor={bgColor} />
     </div>
   );
 }
