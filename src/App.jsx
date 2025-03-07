@@ -468,27 +468,127 @@ import Clock from "./Clock";
 // }
 
 // Practice Question - props
+// function App() {
+//   const [color, setColor] = useState("green");
+//   const [bgColor, setBgColor] = useState("red");
+//   return (
+//     <div>
+//       <h1>Clock color change with dropdown</h1>
+//       <span>Pick A Color: </span>
+//       <select value={color} onChange={(e) => setColor(e.target.value)}>
+//         <option value="red">Red</option>
+//         <option value="green">Green</option>
+//         <option value="blue">Blue</option>
+//         <option value="orange">Orange</option>
+//       </select>
+//       <br /> <br />
+//       <span>Pick A Background Color: </span>
+//       <select value={bgColor} onChange={(e) => setBgColor(e.target.value)}>
+//         <option value="red">Red</option>
+//         <option value="brown">Brown</option>
+//         <option value="pink">Pink</option>
+//         <option value="purple">Purple</option>
+//       </select>
+//       <Clock color={color} bgColor={bgColor} />
+//     </div>
+//   );
+// }
+
+// Nested Looping
 function App() {
-  const [color, setColor] = useState("green");
-  const [bgColor, setBgColor] = useState("red");
+  const collegeData = [
+    {
+      name: "IITM",
+      city: "Delhi",
+      website: "www.iitm.com",
+      student: [
+        {
+          name: "peter",
+          age: "26",
+          email: "peter@test.com",
+        },
+        {
+          name: "andrew",
+          age: "36",
+          email: "andrew@test.com",
+        },
+        {
+          name: "mandy",
+          age: "29",
+          email: "mandy@test.com",
+        },
+      ],
+    },
+    {
+      name: "IPU",
+      city: "Noida",
+      website: "www.ipu.com",
+      student: [
+        {
+          name: "Sandy",
+          age: "23",
+          email: "sandy@test.com",
+        },
+        {
+          name: "micky",
+          age: "18",
+          email: "micky@test.com",
+        },
+        {
+          name: "max",
+          age: "23",
+          email: "max@test.com",
+        },
+      ],
+    },
+    {
+      name: "ignou",
+      city: "gurgaon",
+      website: "www.ignou.com",
+      student: [
+        {
+          name: "Neil",
+          age: "27",
+          email: "neil@test.com",
+        },
+        {
+          name: "rocky",
+          age: "25",
+          email: "rocky@test.com",
+        },
+        {
+          name: "Bob",
+          age: "26",
+          email: "bob@test.com",
+        },
+      ],
+    },
+    {
+      name: "sol",
+      city: "himachal",
+      website: "www.iitm.com",
+      student: [
+        {
+          name: "Jack",
+          age: "31",
+          email: "jack@test.com",
+        },
+        {
+          name: "Candy",
+          age: "24",
+          email: "candy@test.com",
+        },
+        {
+          name: "Joy",
+          age: "26",
+          email: "joy@test.com",
+        },
+      ],
+    },
+  ];
   return (
     <div>
-      <span>Pick A Color: </span>
-      <select value={color} onChange={(e) => setColor(e.target.value)}>
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-        <option value="orange">Orange</option>
-      </select>
-      <br /> <br />
-      <span>Pick A Background Color: </span>
-      <select value={bgColor} onChange={(e) => setBgColor(e.target.value)}>
-        <option value="red">Red</option>
-        <option value="brown">Brown</option>
-        <option value="pink">Pink</option>
-        <option value="purple">Purple</option>
-      </select>
-      <Clock color={color} bgColor={bgColor} />
+      <h1>Nested Looping with Components</h1>
     </div>
   );
 }
