@@ -114,6 +114,7 @@ import Wrapper from "./Wrapper";
 import Skills from "./Skills";
 import UserData from "./UserData";
 import Clock from "./Clock";
+import CollegeData from "./CollegeData";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -589,6 +590,11 @@ function App() {
   return (
     <div>
       <h1>Nested Looping with Components</h1>
+      {collegeData.map((college, index) => (
+        <div key={index}>
+          <CollegeData college={college} />
+        </div>
+      ))}
     </div>
   );
 }
