@@ -115,6 +115,7 @@ import Skills from "./Skills";
 import UserData from "./UserData";
 import Clock from "./Clock";
 import CollegeData from "./CollegeData";
+import CounterUse from "./CounterUse";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -600,31 +601,45 @@ import CollegeData from "./CollegeData";
 // }
 
 // useEffect Hook
+// handle state side effects with useEffect
+// function App() {
+//   const [counter, setCounter] = useState(0);
+//   const [data, setData] = useState(0);
+
+//   useEffect(() => {
+//     callOnce();
+//   }, []);
+
+//   useEffect(() => {
+//     counterFunction();
+//   }, [counter]);
+
+//   function counterFunction() {
+//     console.log("counterFunction", counter);
+//   }
+
+//   function callOnce() {
+//     console.log("callonce function called");
+//   }
+
+//   return (
+//     <div>
+//       <h1>useEffect Hook</h1>
+//       <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
+//       <button onClick={() => setData(data + 1)}>Data {data}</button>
+//     </div>
+//   );
+// }
+
+// handle props side effects with useEffect
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [count, setCount] = useState(0);
   const [data, setData] = useState(0);
-
-  useEffect(() => {
-    callOnce();
-  }, []);
-
-  useEffect(() => {
-    counterFunction();
-  }, [counter]);
-
-  function counterFunction() {
-    console.log("counterFunction", counter);
-  }
-
-  function callOnce() {
-    console.log("callonce function called");
-  }
-
   return (
     <div>
-      <h1>useEffect Hook</h1>
-      <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
-      <button onClick={() => setData(data + 1)}>Data {data}</button>
+      <CounterUse count={count} data={data} />
+      <button onClick={() => setCount(count + 1)}>Count</button>
+      <button onClick={() => setData(data + 1)}>Data</button>
     </div>
   );
 }
