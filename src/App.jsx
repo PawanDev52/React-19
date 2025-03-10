@@ -632,14 +632,19 @@ import CounterUse from "./CounterUse";
 // }
 
 // handle props side effects with useEffect
+// and component life cycle
 function App() {
   const [count, setCount] = useState(0);
   const [data, setData] = useState(0);
+  const [display, setDisplay] = useState(true);
+
   return (
     <div>
-      <CounterUse count={count} data={data} />
+      {display ? <CounterUse count={count} data={data} /> : null}
+
       <button onClick={() => setCount(count + 1)}>Count</button>
       <button onClick={() => setData(data + 1)}>Data</button>
+      <button onClick={() => setDisplay(!display)}>Toggle</button>
     </div>
   );
 }
