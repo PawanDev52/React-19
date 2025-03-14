@@ -653,7 +653,7 @@ import CounterUse from "./CounterUse";
 function App() {
   return (
     <>
-      <h1 style={{ color: "red" }}>Style in React</h1>
+      <h1 style={{ color: "red" }}>Inline Styling in React</h1>
     </>
   );
 }
