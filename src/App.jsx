@@ -651,9 +651,113 @@ import CounterUse from "./CounterUse";
 
 // Inline styles
 function App() {
+  const cardStyle = {
+    border: "1px solid #cccccc3b",
+    width: "200px",
+    boxShadow: "2px 2px 5px 0px #ccc",
+    margin: "10px",
+  };
+
   return (
     <>
       <h1 style={{ color: "red" }}>Inline Styling in React</h1>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
