@@ -117,6 +117,7 @@ import UserData from "./UserData";
 import Clock from "./Clock";
 import CollegeData from "./CollegeData";
 import CounterUse from "./CounterUse";
+import UserProfile from "./UserProfile";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -881,30 +882,45 @@ import CounterUse from "./CounterUse";
 // }
 
 // External style
+// function App() {
+//   return (
+//     <>
+//       <h1 className="heading">External style</h1>
+//       <div className="container">
+//         <div className="user-card">
+//           <div>
+//             <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+//           </div>
+//           <div className="text-wrap">
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+
+//         <div className="user-card">
+//           <div>
+//             <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+//           </div>
+//           <div className="text-wrap">
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// CSS Modules
 function App() {
   return (
     <>
-      <h1 className="heading">External style</h1>
-      <div className="container">
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+      <h1 className="heading">Style with CSS Module in React js</h1>
+      <div style={{ display: "flex" }}>
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
       </div>
     </>
   );

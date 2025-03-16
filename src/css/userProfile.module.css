@@ -1,0 +1,15 @@
+.heading {
+  color: red;
+}
+
+.img {
+  width: 200px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  width: 200px;
+  margin: 25px 10px;
+  text-align: center;
+  box-shadow: 4px 10px 25px #00000080;
+}
