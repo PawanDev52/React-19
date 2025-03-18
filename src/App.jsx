@@ -2,6 +2,7 @@ import { createElement, useEffect } from "react";
 import Login, { Profile, Setting, UserKey } from "./UserComponent";
 import ToDo from "./ToDo";
 import "./css/style.css";
+import styled from "styled-components";
 
 // function App() {
 // const userName = "React Dev";
@@ -912,16 +913,56 @@ import UserProfile from "./UserProfile";
 // }
 
 // CSS Modules
+// function App() {
+//   return (
+//     <>
+//       <h1 className="heading">Style with CSS Module in React js</h1>
+//       <div style={{ display: "flex" }}>
+//         <UserProfile />
+//         <UserProfile />
+//         <UserProfile />
+//         <UserProfile />
+//       </div>
+//     </>
+//   );
+// }
+
+// Styled Components
 function App() {
+  // const Heading = styled.h1`
+  //   color: red;
+  //   border: 2px solid green;
+  //   border-radius: 10px;
+  //   margin: 20px;
+  //   padding: 20px;
+  // `;
+
+  // another way
+  const Heading = styled.h1({
+    color: "red",
+    border: "2px solid green",
+    borderRadius: "10px",
+    margin: "20px",
+    padding: "20px",
+  });
+
+  const StyleBtn = styled.button`
+    color: red;
+    width: 130px;
+    height: 40px;
+    margin: 20px;
+    background: grey;
+  `;
+
   return (
     <>
-      <h1 className="heading">Style with CSS Module in React js</h1>
-      <div style={{ display: "flex" }}>
-        <UserProfile />
-        <UserProfile />
-        <UserProfile />
-        <UserProfile />
-      </div>
+      <h1>Styled Component with React</h1>
+      <Heading>Hello Heading</Heading>
+      <Heading>Hello Heading 2</Heading>
+      <Heading>Hello Heading 3</Heading>
+      <Heading>Hello Heading 4</Heading>
+      <StyleBtn>Login</StyleBtn>
+      <StyleBtn>SignUp</StyleBtn>
     </>
   );
 }
