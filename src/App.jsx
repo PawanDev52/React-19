@@ -975,6 +975,7 @@ function App() {
       <h1>Add Bootstrap in React Js</h1>
       <Button>Ok</Button>
       <button>Ok</button>
+      <button>Ok</button>
     </>
   );
 }
