@@ -4,6 +4,7 @@ import ToDo from "./ToDo";
 import "./css/style.css";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 
 // function App() {
 // const userName = "React Dev";
@@ -973,9 +974,15 @@ function App() {
   return (
     <>
       <h1>Add Bootstrap in React Js</h1>
-      <Button>Ok</Button>
-      <button>Ok</button>
-      <button>Ok</button>
+      <button onClick={() => alert("simple button")}>Simple Button</button>
+
+      <Alert variant="primary">Hello Bt Installer!</Alert>
+
+      <Button onClick={() => alert("bootstrap button")} variant="danger">
+        Bootstrap button
+      </Button>
+      <Button variant="success">Ok</Button>
+      <Button variant="warning">Ok</Button>
     </>
   );
 }
