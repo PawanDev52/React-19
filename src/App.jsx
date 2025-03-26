@@ -5,6 +5,7 @@ import "./css/style.css";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { Alert } from "react-bootstrap";
+import { useRef } from "react";
 
 // function App() {
 // const userName = "React Dev";
@@ -970,19 +971,57 @@ import UserProfile from "./UserProfile";
 // }
 
 // Boostrap style
+// function App() {
+//   return (
+//     <>
+//       <h1>Add Bootstrap in React Js</h1>
+//       <button onClick={() => alert("simple button")}>Simple Button</button>
+
+//       <Alert variant="primary">Hello Bt Installer!</Alert>
+
+//       <Button onClick={() => alert("bootstrap button")} variant="danger">
+//         Bootstrap button
+//       </Button>
+//       <Button variant="success">Ok</Button>
+//       <Button variant="warning">Ok</Button>
+//     </>
+//   );
+// }
+
+// useRef hook
 function App() {
+  const inputRef = useRef(null);
+  const h1Ref = useRef(null);
+
+  const inputHandler = () => {
+    console.log(inputRef);
+    inputRef.current.focus();
+    inputRef.current.style.color = "red";
+    inputRef.current.placeholder = "enter password";
+    inputRef.current.value = "123";
+  };
+
+  const toggleHandler = () => {
+    if (inputRef.current.style.display != "none") {
+      inputRef.current.style.display = "none";
+    } else {
+      inputRef.current.style.display = "inline";
+    }
+  };
+
+  const h1Handler = () => {
+    h1Ref.current.style.color = "green";
+  };
+
   return (
     <>
-      <h1>Add Bootstrap in React Js</h1>
-      <button onClick={() => alert("simple button")}>Simple Button</button>
+      <h1>useRef</h1>
+      <button onClick={toggleHandler}>toggle</button>
+      <input ref={inputRef} type="text" placeholder="Enter user name" />
+      <button onClick={inputHandler}>Focus on input field</button>
 
-      <Alert variant="primary">Hello Bt Installer!</Alert>
-
-      <Button onClick={() => alert("bootstrap button")} variant="danger">
-        Bootstrap button
-      </Button>
-      <Button variant="success">Ok</Button>
-      <Button variant="warning">Ok</Button>
+      <h1 ref={h1Ref}>Web Master</h1>
+      <button onClick={h1Handler}>Handler</button>
     </>
   );
 }
