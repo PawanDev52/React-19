@@ -122,6 +122,7 @@ import Clock from "./Clock";
 import CollegeData from "./CollegeData";
 import CounterUse from "./CounterUse";
 import UserProfile from "./UserProfile";
+import PassComp from "./PassComponent";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -1074,9 +1075,21 @@ import UserProfile from "./UserProfile";
 
 // pass function in component
 function App() {
+  const displayName = (name) => {
+    alert(name);
+  };
+
+  const getUser = () => {
+    alert("getUser function called");
+  };
+
   return (
     <>
-      <h1>Call Parent Function from child component</h1>
+      <h1>Call Parent Component Function from child component</h1>
+      <PassComp displayName={displayName} name="henry" getUser={getUser} />
+      <PassComp displayName={displayName} getUser={getUser} />
+      <PassComp displayName={displayName} name="sandy" getUser={getUser} />
+      <PassComp displayName={displayName} name="mandy" getUser={getUser} />
     </>
   );
 }
