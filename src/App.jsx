@@ -123,6 +123,7 @@ import CollegeData from "./CollegeData";
 import CounterUse from "./CounterUse";
 import UserProfile from "./UserProfile";
 import PassComp from "./PassComponent";
+import UserInput from "./UserInput";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -1100,12 +1101,13 @@ function App() {
   const updateInput = () => {
     inputRef.current.focus();
     inputRef.current.value = 1000;
+    inputRef.current.style.color = "red";
   };
-  
+
   return (
     <>
       <h1>Forward Ref</h1>
-      <input type="text" ref={inputRef} />
+      <UserInput ref={inputRef} />
       <button onClick={updateInput}>Update Input Field</button>
     </>
   );
