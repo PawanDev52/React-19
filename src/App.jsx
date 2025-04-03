@@ -1074,27 +1074,41 @@ import PassComp from "./PassComponent";
 // }
 
 // pass function in component
+// function App() {
+//   const displayName = (name) => {
+//     alert(name);
+//   };
+
+//   const getUser = () => {
+//     alert("getUser function called");
+//   };
+
+//   return (
+//     <>
+//       <h1>Call Parent Component Function from child component</h1>
+//       <PassComp displayName={displayName} name="henry" getUser={getUser} />
+//       <PassComp displayName={displayName} getUser={getUser} />
+//       <PassComp displayName={displayName} name="sandy" getUser={getUser} />
+//       <PassComp displayName={displayName} name="mandy" getUser={getUser} />
+//     </>
+//   );
+// }
+
+// ForwardRef in react
 function App() {
-  const displayName = (name) => {
-    alert(name);
+  const inputRef = useRef(null);
+  const updateInput = () => {
+    inputRef.current.focus();
+    inputRef.current.value = 1000;
   };
-
-  const getUser = () => {
-    alert("getUser function called");
-  };
-
+  
   return (
     <>
-      <h1>Call Parent Component Function from child component</h1>
-      <PassComp displayName={displayName} name="henry" getUser={getUser} />
-      <PassComp displayName={displayName} getUser={getUser} />
-      <PassComp displayName={displayName} name="sandy" getUser={getUser} />
-      <PassComp displayName={displayName} name="mandy" getUser={getUser} />
+      <h1>Forward Ref</h1>
+      <input type="text" ref={inputRef} />
+      <button onClick={updateInput}>Update Input Field</button>
     </>
   );
 }
-
-// ForwardRef in react
-
 
 export default App;
