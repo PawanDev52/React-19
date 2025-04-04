@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { Alert } from "react-bootstrap";
 import { useRef } from "react";
+import { useFormStatus } from "react-dom";
 
 // function App() {
 // const userName = "React Dev";
@@ -1096,20 +1097,53 @@ import UserInput from "./UserInput";
 // }
 
 // ForwardRef in react
+// function App() {
+//   const inputRef = useRef(null);
+//   const updateInput = () => {
+//     inputRef.current.focus();
+//     inputRef.current.value = 1000;
+//     inputRef.current.style.color = "red";
+//   };
+
+//   return (
+//     <>
+//       <h1>Forward Ref</h1>
+//       <UserInput ref={inputRef} />
+//       <button onClick={updateInput}>Update Input Field</button>
+//     </>
+//   );
+// }
+
+// useFormStatus hook
 function App() {
-  const inputRef = useRef(null);
-  const updateInput = () => {
-    inputRef.current.focus();
-    inputRef.current.value = 1000;
-    inputRef.current.style.color = "red";
+  const handleSubmit = async () => {
+    await new Promise((res) => setTimeout(res, 2000));
+    console.log("submit");
   };
 
+  function CustomerForm() {
+    const { pending } = useFormStatus();
+    console.log(pending);
+    return (
+      <div>
+        <input type="text" placeholder="Enter Name" />
+        <br /> <br />
+        <input type="text" placeholder="Enter Password" />
+        <br /> <br />
+        <button disabled={pending}>
+          {pending ? "Submittig..." : "Submit"}
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <>
-      <h1>Forward Ref</h1>
-      <UserInput ref={inputRef} />
-      <button onClick={updateInput}>Update Input Field</button>
-    </>
+    <div>
+      <h1>useFormStatus Hook in React</h1>
+      <form action={handleSubmit}>
+        <CustomerForm />
+      </form>
+    </div>
   );
 }
 
