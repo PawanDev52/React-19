@@ -1,4 +1,4 @@
-import { createElement, useEffect } from "react";
+import { createElement, useEffect, useTransition } from "react";
 import Login, { Profile, Setting, UserKey } from "./UserComponent";
 import ToDo from "./ToDo";
 import "./css/style.css";
@@ -1115,34 +1115,54 @@ import UserInput from "./UserInput";
 // }
 
 // useFormStatus hook
-function App() {
-  const handleSubmit = async () => {
-    await new Promise((res) => setTimeout(res, 2000));
-    console.log("submit");
-  };
+// function App() {
+//   const handleSubmit = async () => {
+//     await new Promise((res) => setTimeout(res, 2000));
+//     console.log("submit");
+//   };
 
-  function CustomerForm() {
-    const { pending } = useFormStatus();
-    console.log(pending);
-    return (
-      <div>
-        <input type="text" placeholder="Enter Name" />
-        <br /> <br />
-        <input type="text" placeholder="Enter Password" />
-        <br /> <br />
-        <button disabled={pending}>
-          {pending ? "Submittig..." : "Submit"}
-        </button>
-      </div>
-    );
-  }
+//   function CustomerForm() {
+//     const { pending } = useFormStatus();
+//     console.log(pending);
+//     return (
+//       <div>
+//         <input type="text" placeholder="Enter Name" />
+//         <br /> <br />
+//         <input type="text" placeholder="Enter Password" />
+//         <br /> <br />
+//         <button disabled={pending}>
+//           {pending ? "Submittig..." : "Submit"}
+//         </button>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div>
+//       <h1>useFormStatus Hook in React</h1>
+//       <form action={handleSubmit}>
+//         <CustomerForm />
+//       </form>
+//     </div>
+//   );
+// }
+
+// useTransition Hook
+function App() {
+  const [pending, startTransition] = useTransition();
+
+  const handleButton = () => {
+    startTransition(async () => {
+      await new Promise((res) => setTimeout(res, 2000));
+    });
+  };
 
   return (
     <div>
-      <h1>useFormStatus Hook in React</h1>
-      <form action={handleSubmit}>
-        <CustomerForm />
-      </form>
+      <h1>useTransition Hook in React Js</h1>
+      <button disabled={pending} onClick={handleButton}>
+        Click
+      </button>
     </div>
   );
 }
