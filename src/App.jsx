@@ -1148,22 +1148,42 @@ import UserInput from "./UserInput";
 // }
 
 // useTransition Hook
+// function App() {
+//   const [pending, startTransition] = useTransition();
+
+//   const handleButton = () => {
+//     startTransition(async () => {
+//       await new Promise((res) => setTimeout(res, 2000));
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <h1>useTransition Hook in React Js</h1>
+//       <button disabled={pending} onClick={handleButton}>
+//         Click
+//       </button>
+//     </div>
+//   );
+// }
+
+// Pure Component
 function App() {
-  const [pending, startTransition] = useTransition();
-
-  const handleButton = () => {
-    startTransition(async () => {
-      await new Promise((res) => setTimeout(res, 2000));
-    });
+  const Cup = ({ count }) => {
+    return (
+      <h2>
+        We have {count} guest and we have to make {count} cup of tea
+      </h2>
+    );
   };
-
   return (
-    <div>
-      <h1>useTransition Hook in React Js</h1>
-      <button disabled={pending} onClick={handleButton}>
-        Click
-      </button>
-    </div>
+    <>
+      <h1>Keeping Components Pure</h1>
+      <Cup count={2} />
+      <Cup count={1} />
+      <Cup count={4} />
+      <Cup count={5} />
+    </>
   );
 }
 
