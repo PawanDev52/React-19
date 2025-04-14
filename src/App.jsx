@@ -1168,22 +1168,43 @@ import UserInput from "./UserInput";
 // }
 
 // Pure Component
+// function App() {
+//   const Cup = ({ count }) => {
+//     return (
+//       <h2>
+//         We have {count} guest and we have to make {count} cup of tea
+//       </h2>
+//     );
+//   };
+//   return (
+//     <>
+//       <h1>Keeping Components Pure</h1>
+//       <Cup count={2} />
+//       <Cup count={1} />
+//       <Cup count={4} />
+//       <Cup count={5} />
+//     </>
+//   );
+// }
+
+// Derived State
 function App() {
-  const Cup = ({ count }) => {
-    return (
-      <h2>
-        We have {count} guest and we have to make {count} cup of tea
-      </h2>
-    );
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState("");
+  const handleAddUsers = () => {
+    setUsers([...users, user]);
   };
+
   return (
-    <>
-      <h1>Keeping Components Pure</h1>
-      <Cup count={2} />
-      <Cup count={1} />
-      <Cup count={4} />
-      <Cup count={5} />
-    </>
+    <div>
+      <input type="text" onChange={(e) => setUser(e.target.value)} placeholder="add new user" />
+      <button onClick={handleAddUsers}>Add User</button>
+      {
+        users.map((item, index)=>{
+          <h4>{item}</h4>
+        })
+      }
+    </div>
   );
 }
 
