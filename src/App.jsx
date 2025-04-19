@@ -1197,13 +1197,15 @@ function App() {
 
   return (
     <div>
-      <input type="text" onChange={(e) => setUser(e.target.value)} placeholder="add new user" />
+      <input
+        type="text"
+        onChange={(e) => setUser(e.target.value)}
+        placeholder="add new user"
+      />
       <button onClick={handleAddUsers}>Add User</button>
-      {
-        users.map((item, index)=>{
-          <h4>{item}</h4>
-        })
-      }
+      {users.map((item, index) => {
+        <h4>{item}</h4>;
+      })}
     </div>
   );
 }
