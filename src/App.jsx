@@ -1241,12 +1241,27 @@ function App() {
     setData({ ...data, name: e.target.value });
   }
 
+  function handleAddress(e) {
+    setData({
+      ...data,
+      address: {
+        ...data.address,
+        [e.target.name]: e.target.value,
+      },
+    });
+  }
+
   return (
     <div>
       <h1>Updating Object in State</h1>
 
       <input type="text" onChange={handleName} name="name" placeholder="Enter Name" />
-      
+      <br /><br />
+      <input type="text" onChange={handleAddress} name="city" placeholder="Enter City" />
+      <br /><br />
+      <input type="text" onChange={handleAddress} name="country" placeholder="Enter Country" />
+      <br /><br />
+
       <h3>Name: {data.name}</h3>
       <h3>City: {data.address.city}</h3>
       <h3>Country: {data.address.country}</h3>
