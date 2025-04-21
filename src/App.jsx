@@ -1217,12 +1217,39 @@ import DisplayUser from "./DisplayUser";
 // }
 
 // Lifting State
+// function App() {
+//   const [user, setUser] = useState("");
+//   return (
+//     <div>
+//       <AddUser addUser={setUser} />
+//       <DisplayUser displayUser={user} />
+//     </div>
+//   );
+// }
+
+// Object in State
 function App() {
-  const [user, setUser] = useState("");
+  const [data, setData] = useState({
+    name: "peter",
+    address: {
+      city: "delhi",
+      country: "India",
+    },
+  });
+
+  function handleName(e) {
+    setData({ ...data, name: e.target.value });
+  }
+
   return (
     <div>
-      <AddUser addUser={setUser} />
-      <DisplayUser displayUser={user} />
+      <h1>Updating Object in State</h1>
+
+      <input type="text" onChange={handleName} name="name" placeholder="Enter Name" />
+      
+      <h3>Name: {data.name}</h3>
+      <h3>City: {data.address.city}</h3>
+      <h3>Country: {data.address.country}</h3>
     </div>
   );
 }
