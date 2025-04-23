@@ -1277,12 +1277,31 @@ function App() {
     setData([...data]);
   };
 
+  const [details, setDetails] = useState([
+    { name: "mandy", age: "26" },
+    { name: "sam", age: "36" },
+    { name: "peter", age: "29" },
+  ]);
+  const handleAge = (age) => {
+    details[details.length - 1].age = age;
+    setDetails([...details]);
+  };
+
   return (
     <div>
       <h1>Updating Array in State</h1>
       <input type="text" onChange={(e) => handleName(e.target.value)} placeholder="Enter last user name" />
+
       {data.map((item, index) => (
         <h3 key={index}>{item}</h3>
+      ))}
+      <hr />
+
+      <input type="text" onChange={(e) => handleAge(e.target.value)} placeholder="Enter last user age" />
+      {details.map((item, index) => (
+        <h3 key={index}>
+          {item.name}, {item.age}
+        </h3>
       ))}
     </div>
   );
