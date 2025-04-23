@@ -1227,48 +1227,65 @@ import DisplayUser from "./DisplayUser";
 //   );
 // }
 
-// Object in State
+// Update Object in State
+// function App() {
+//   const [data, setData] = useState({
+//     name: "peter",
+//     address: {
+//       city: "delhi",
+//       country: "India",
+//     },
+//   });
+
+//   function handleName(e) {
+//     setData({ ...data, name: e.target.value });
+//   }
+
+//   function handleAddress(e) {
+//     setData({
+//       ...data,
+//       address: {
+//         ...data.address,
+//         [e.target.name]: e.target.value,
+//       },
+//     });
+//   }
+
+//   return (
+//     <div>
+//       <h1>Updating Object in State</h1>
+
+//       <input type="text" onChange={handleName} name="name" placeholder="Enter Name" />
+//       <br /><br />
+//       <input type="text" onChange={handleAddress} name="city" placeholder="Enter City" />
+//       <br /><br />
+//       <input type="text" onChange={handleAddress} name="country" placeholder="Enter Country" />
+//       <br /><br />
+
+//       <h3>Name: {data.name}</h3>
+//       <h3>City: {data.address.city}</h3>
+//       <h3>Country: {data.address.country}</h3>
+//     </div>
+//   );
+// }
+
+// Update Array in State
 function App() {
-  const [data, setData] = useState({
-    name: "peter",
-    address: {
-      city: "delhi",
-      country: "India",
-    },
-  });
-
-  function handleName(e) {
-    setData({ ...data, name: e.target.value });
-  }
-
-  function handleAddress(e) {
-    setData({
-      ...data,
-      address: {
-        ...data.address,
-        [e.target.name]: e.target.value,
-      },
-    });
-  }
+  const [data, setData] = useState(["sam", "mandy", "peter", "tony"]);
+  const handleName = (name) => {
+    data[data.length - 1] = name;
+    setData([...data]);
+  };
 
   return (
     <div>
-      <h1>Updating Object in State</h1>
-
-      <input type="text" onChange={handleName} name="name" placeholder="Enter Name" />
-      <br /><br />
-      <input type="text" onChange={handleAddress} name="city" placeholder="Enter City" />
-      <br /><br />
-      <input type="text" onChange={handleAddress} name="country" placeholder="Enter Country" />
-      <br /><br />
-
-      <h3>Name: {data.name}</h3>
-      <h3>City: {data.address.city}</h3>
-      <h3>Country: {data.address.country}</h3>
+      <h1>Updating Array in State</h1>
+      <input type="text" onChange={(e) => handleName(e.target.value)} placeholder="Enter last user name" />
+      {data.map((item, index) => (
+        <h3 key={index}>{item}</h3>
+      ))}
     </div>
   );
 }
-
-// useAction State hook
 
 export default App;
