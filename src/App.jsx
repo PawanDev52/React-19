@@ -1273,8 +1273,9 @@ import DisplayUser from "./DisplayUser";
 function App() {
   const [data, setData] = useState(["sam", "mandy", "peter", "tony"]);
   const handleName = (name) => {
-    data[data.length - 1] = name;
-    setData([...data]);
+    let updates = [...data];
+    updates[updates.length - 1] = name;
+    setData(updates);
   };
 
   const [details, setDetails] = useState([
@@ -1282,9 +1283,15 @@ function App() {
     { name: "sam", age: "36" },
     { name: "peter", age: "29" },
   ]);
+
   const handleAge = (age) => {
-    details[details.length - 1].age = age;
-    setDetails([...details]);
+    // details[details.length - 1].age = age;
+    // setDetails([...details]);
+
+    let updateAge = details.map((item, index) =>
+      index === details.length - 1 ? { ...item, age: age } : item
+    );
+    setDetails(updateAge);
   };
 
   return (
@@ -1298,6 +1305,7 @@ function App() {
       <hr />
 
       <input type="text" onChange={(e) => handleAge(e.target.value)} placeholder="Enter last user age" />
+      
       {details.map((item, index) => (
         <h3 key={index}>
           {item.name}, {item.age}
