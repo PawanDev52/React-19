@@ -1270,47 +1270,56 @@ import DisplayUser from "./DisplayUser";
 // }
 
 // Update Array in State
+// function App() {
+//   const [data, setData] = useState(["sam", "mandy", "peter", "tony"]);
+//   const handleName = (name) => {
+//     let updates = [...data];
+//     updates[updates.length - 1] = name;
+//     setData(updates);
+//   };
+
+//   const [details, setDetails] = useState([
+//     { name: "mandy", age: "26" },
+//     { name: "sam", age: "36" },
+//     { name: "peter", age: "29" },
+//   ]);
+
+//   const handleAge = (age) => {
+//     // details[details.length - 1].age = age;
+//     // setDetails([...details]);
+
+//     let updateAge = details.map((item, index) =>
+//       index === details.length - 1 ? { ...item, age: age } : item
+//     );
+//     setDetails(updateAge);
+//   };
+
+//   return (
+//     <div>
+//       <h1>Updating Array in State</h1>
+//       <input type="text" onChange={(e) => handleName(e.target.value)} placeholder="Enter last user name" />
+
+//       {data.map((item, index) => (
+//         <h3 key={index}>{item}</h3>
+//       ))}
+//       <hr />
+
+//       <input type="text" onChange={(e) => handleAge(e.target.value)} placeholder="Enter last user age" />
+
+//       {details.map((item, index) => (
+//         <h3 key={index}>
+//           {item.name}, {item.age}
+//         </h3>
+//       ))}
+//     </div>
+//   );
+// }
+
+// useActionState hook
 function App() {
-  const [data, setData] = useState(["sam", "mandy", "peter", "tony"]);
-  const handleName = (name) => {
-    let updates = [...data];
-    updates[updates.length - 1] = name;
-    setData(updates);
-  };
-
-  const [details, setDetails] = useState([
-    { name: "mandy", age: "26" },
-    { name: "sam", age: "36" },
-    { name: "peter", age: "29" },
-  ]);
-
-  const handleAge = (age) => {
-    // details[details.length - 1].age = age;
-    // setDetails([...details]);
-
-    let updateAge = details.map((item, index) =>
-      index === details.length - 1 ? { ...item, age: age } : item
-    );
-    setDetails(updateAge);
-  };
-
   return (
     <div>
-      <h1>Updating Array in State</h1>
-      <input type="text" onChange={(e) => handleName(e.target.value)} placeholder="Enter last user name" />
-
-      {data.map((item, index) => (
-        <h3 key={index}>{item}</h3>
-      ))}
-      <hr />
-
-      <input type="text" onChange={(e) => handleAge(e.target.value)} placeholder="Enter last user age" />
-      
-      {details.map((item, index) => (
-        <h3 key={index}>
-          {item.name}, {item.age}
-        </h3>
-      ))}
+      <h1>useActionState Hook</h1>
     </div>
   );
 }
