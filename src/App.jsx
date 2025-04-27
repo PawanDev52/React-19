@@ -1,4 +1,10 @@
-import { createElement, useActionState, useEffect, useTransition } from "react";
+import {
+  createElement,
+  useActionState,
+  useEffect,
+  useId,
+  useTransition,
+} from "react";
 import Login, { Profile, Setting, UserKey } from "./UserComponent";
 import ToDo from "./ToDo";
 import "./css/style.css";
@@ -1316,41 +1322,75 @@ import DisplayUser from "./DisplayUser";
 // }
 
 // useActionState hook
+// function App() {
+//   const handleSubmit = async (previousData, formData) => {
+//     let name = formData.get("name");
+//     let password = formData.get("password");
+
+//     await new Promise((res) => setTimeout(res, 2000));
+//     // console.log("handleSubmit Called", name, password);
+//     if (name && password) {
+//       return { message: "Data Submitted", name, password };
+//     } else {
+//       return { error: "Failed to Submit, Enter proper data", name, password };
+//     }
+//   };
+
+//   const [data, action, pending] = useActionState(handleSubmit, undefined);
+//   // console.log(data);
+
+//   return (
+//     <div>
+//       <h1>useActionState Hook in React</h1>
+//       <form action={action}>
+//         <input defaultValue={data?.name} type="text" name="name" placeholder="enter name" />
+//         <br /> <br />
+//         <input defaultValue={data?.password} type="password" name="password" placeholder="enter password" />
+//         <br /> <br />
+//         <button disabled={pending}>Submit</button>
+//       </form>
+//       <br />
+
+//       {data?.error && <span style={{ color: "red" }}>{data?.error}</span>}
+
+//       {data?.message && <span style={{ color: "green" }}>{data?.message}</span>}
+
+//       <h3>Name: {data?.name}</h3>
+//       <h3>Password: {data?.password}</h3>
+//     </div>
+//   );
+// }
+
+// useId hook
 function App() {
-  const handleSubmit = async (previousData, formData) => {
-    let name = formData.get("name");
-    let password = formData.get("password");
+  return (
+    <div>
+      <h1>useId Hook in React</h1>
+      <UserForm />
+      <hr />
+      <UserForm />
+    </div>
+  );
+}
 
-    await new Promise((res) => setTimeout(res, 2000));
-    // console.log("handleSubmit Called", name, password);
-    if (name && password) {
-      return { message: "Data Submitted", name, password };
-    } else {
-      return { error: "Failed to Submit, Enter proper data", name, password };
-    }
-  };
-
-  const [data, action, pending] = useActionState(handleSubmit, undefined);
-  // console.log(data);
+function UserForm() {
+  const user = useId();
 
   return (
     <div>
-      <h1>useActionState Hook in React</h1>
-      <form action={action}>
-        <input defaultValue={data?.name} type="text" name="name" placeholder="enter name" />
-        <br /> <br />
-        <input defaultValue={data?.password} type="password" name="password" placeholder="enter password" />
-        <br /> <br />
-        <button disabled={pending}>Submit</button>
+      <form action="">
+        <label htmlFor={user + "name"}>Enter user name</label>
+        <input id={user + "name"} type="text" placeholder="enter user name" />
+        <br /><br />
+        <label htmlFor={user + "password"}>Enter user password</label>
+        <input id={user + "password"} type="text" placeholder="enter password" />
+        <br /><br />
+        <label htmlFor={user + "skills"}>Enter user skills</label>
+        <input id={user + "skills"} type="text" placeholder="enter skills" />
+        <br /><br />
+        <input id={user + "terms"} type="checkbox" placeholder="enter skills" />
+        <label htmlFor={user + "terms"}>Terms and Conditions</label>
       </form>
-      <br />
-
-      {data?.error && <span style={{ color: "red" }}>{data?.error}</span>}
-
-      {data?.message && <span style={{ color: "green" }}>{data?.message}</span>}
-      
-      <h3>Name: {data?.name}</h3>
-      <h3>Password: {data?.password}</h3>
     </div>
   );
 }
