@@ -1,5 +1,6 @@
 import {
   createElement,
+  Fragment,
   useActionState,
   useEffect,
   useId,
@@ -1362,39 +1363,54 @@ import DisplayUser from "./DisplayUser";
 // }
 
 // useId hook
-function App() {
-  return (
-    <div>
-      <h1>useId Hook in React</h1>
-      <UserForm />
-      <hr />
-      <UserForm />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <h1>useId Hook in React</h1>
+//       <UserForm />
+//       <hr />
+//       <UserForm />
+//     </div>
+//   );
+// }
 
-function UserForm() {
-  const user = useId();
+// function UserForm() {
+//   const user = useId();
 
-  return (
-    <div>
-      <form action="">
-        <label htmlFor={user + "name"}>Enter user name</label>
-        <input id={user + "name"} type="text" placeholder="enter user name" />
-        <br /><br />
-        <label htmlFor={user + "password"}>Enter user password</label>
-        <input id={user + "password"} type="text" placeholder="enter password" />
-        <br /><br />
-        <label htmlFor={user + "skills"}>Enter user skills</label>
-        <input id={user + "skills"} type="text" placeholder="enter skills" />
-        <br /><br />
-        <input id={user + "terms"} type="checkbox" placeholder="enter skills" />
-        <label htmlFor={user + "terms"}>Terms and Conditions</label>
-      </form>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <form action="">
+//         <label htmlFor={user + "name"}>Enter user name</label>
+//         <input id={user + "name"} type="text" placeholder="enter user name" />
+//         <br /><br />
+//         <label htmlFor={user + "password"}>Enter user password</label>
+//         <input id={user + "password"} type="text" placeholder="enter password" />
+//         <br /><br />
+//         <label htmlFor={user + "skills"}>Enter user skills</label>
+//         <input id={user + "skills"} type="text" placeholder="enter skills" />
+//         <br /><br />
+//         <input id={user + "terms"} type="checkbox" placeholder="enter skills" />
+//         <label htmlFor={user + "terms"}>Terms and Conditions</label>
+//       </form>
+//     </div>
+//   );
+// }
 
 // Fragement
+function App() {
+  return (
+    <>
+      <Data />
+    </>
+  );
+}
+
+function Data() {
+  return (
+    <Fragment>
+      <h1>Fragement in React</h1>
+    </Fragment>
+  );
+}
 
 export default App;
