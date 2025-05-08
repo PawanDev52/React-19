@@ -135,6 +135,7 @@ import UserInput from "./UserInput";
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
 import CollegeContext from "./CollegeContext";
+import { SubjectName } from "./ContextData";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -1417,8 +1418,10 @@ import CollegeContext from "./CollegeContext";
 function App() {
   return (
     <div style={{ background: "yellow", padding: "20px" }}>
-      <h1>Context API</h1>
-      <CollegeContext />
+      <SubjectName.Provider value="English">
+        <h1>Context API</h1>
+        <CollegeContext />
+      </SubjectName.Provider>
     </div>
   );
 }

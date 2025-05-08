@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const SubjectContext = createContext('Maths');
+export const SubjectName = createContext('Maths');
