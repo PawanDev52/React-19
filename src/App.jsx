@@ -1416,7 +1416,7 @@ import CollegeContext from "./CollegeContext";
 
 function App() {
   return (
-    <div style={{background: 'yellow', padding: '20px'}}>
+    <div style={{ background: "yellow", padding: "20px" }}>
       <h1>Context API</h1>
       <CollegeContext />
     </div>
