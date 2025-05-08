@@ -134,6 +134,7 @@ import PassComp from "./PassComponent";
 import UserInput from "./UserInput";
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
+import CollegeContext from "./CollegeContext";
 
 // function App() {
 //   const [fruit, setFruit] = useState("Apple");
@@ -1397,19 +1398,28 @@ import DisplayUser from "./DisplayUser";
 // }
 
 // Fragement
+// function App() {
+//   return (
+//     <>
+//       <Data />
+//     </>
+//   );
+// }
+
+// function Data() {
+//   return (
+//     <Fragment>
+//       <h1>Fragement in React</h1>
+//     </Fragment>
+//   );
+// }
+
 function App() {
   return (
-    <>
-      <Data />
-    </>
-  );
-}
-
-function Data() {
-  return (
-    <Fragment>
-      <h1>Fragement in React</h1>
-    </Fragment>
+    <div style={{background: 'yellow', padding: '20px'}}>
+      <h1>Context API</h1>
+      <CollegeContext />
+    </div>
   );
 }
 
