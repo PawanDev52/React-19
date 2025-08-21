@@ -15,18 +15,19 @@ import { Alert } from "react-bootstrap";
 import { useRef } from "react";
 import { useFormStatus } from "react-dom";
 
-// function App() {
-// const userName = "React Dev";
-// let x = 20;
-// let y = 30;
-// return (
-//   <>
-//     <h1>{userName}</h1>
-//     <h1>{10 + 20 + 30}</h1>
-//     <h1>{x * y}</h1>
-//     <button onClick={() => alert("hello")}>Click</button>
-//   </>
-// );
+function App() {
+  const userName = "React Dev";
+  let x = 20;
+  let y = 30;
+  return (
+    <>
+      <h1>{userName}</h1>
+      <h1>{10 + 20 + 30}</h1>
+      <h1>{x * y}</h1>
+      <button onClick={() => alert("hello")}>Click</button>
+    </>
+  );
+}
 
 // without jsx
 // return createElement("div", {id:"rootDiv"}, "hellow");
@@ -1415,25 +1416,25 @@ import { SubjectName } from "./ContextData";
 //   );
 // }
 
-function App() {
-  const [subject, setSubject] = useState("");
-  return (
-    <div style={{ background: "yellow", padding: "20px" }}>
-      <SubjectName.Provider value={subject}>
-        <select value={subject} onChange={(event) => setSubject(event.target.value)} >
-          <option value="">Select Subject</option>
-          <option value="Maths">Maths</option>
-          <option value="Science">Science</option>
-          <option value="History">History</option>
-          <option value="English">English</option>
-        </select>
-        <h1>Context API</h1>
-        <button onClick={() => setSubject("")}>Clear Subject</button>
-        <CollegeContext />
-      </SubjectName.Provider>
-    </div>
-  );
-}
+// function App() {
+//   const [subject, setSubject] = useState("");
+//   return (
+//     <div style={{ background: "yellow", padding: "20px" }}>
+//       <SubjectName.Provider value={subject}>
+//         <select value={subject} onChange={(event) => setSubject(event.target.value)} >
+//           <option value="">Select Subject</option>
+//           <option value="Maths">Maths</option>
+//           <option value="Science">Science</option>
+//           <option value="History">History</option>
+//           <option value="English">English</option>
+//         </select>
+//         <h1>Context API</h1>
+//         <button onClick={() => setSubject("")}>Clear Subject</button>
+//         <CollegeContext />
+//       </SubjectName.Provider>
+//     </div>
+//   );
+// }
 
 // react routing
 
