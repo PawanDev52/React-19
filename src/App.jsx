@@ -15,19 +15,19 @@ import { Alert } from "react-bootstrap";
 import { useRef } from "react";
 import { useFormStatus } from "react-dom";
 
-function App() {
-  const userName = "React Dev";
-  let x = 20;
-  let y = 30;
-  return (
-    <>
-      <h1>{userName}</h1>
-      <h1>{10 + 20 + 30}</h1>
-      <h1>{x * y}</h1>
-      <button onClick={() => alert("hello")}>Click</button>
-    </>
-  );
-}
+// function App() {
+//   const userName = "React Dev";
+//   let x = 20;
+//   let y = 30;
+//   return (
+//     <>
+//       <h1>{userName}</h1>
+//       <h1>{10 + 20 + 30}</h1>
+//       <h1>{x * y}</h1>
+//       <button onClick={() => alert("hello")}>Click</button>
+//     </>
+//   );
+// }
 
 // without jsx
 // return createElement("div", {id:"rootDiv"}, "hellow");
@@ -39,13 +39,13 @@ function App() {
 // }
 
 // jsx exercise
-// function App(){
-//   return (
-//     <div>
-//       <ToDo />
-//     </div>
-//   )
-// }
+function App(){
+  return (
+    <div>
+      <ToDo />
+    </div>
+  )
+}
 
 // jsx with curly braces
 // function App() {
