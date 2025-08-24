@@ -39,13 +39,13 @@ import { useFormStatus } from "react-dom";
 // }
 
 // jsx exercise
-function App(){
-  return (
-    <div>
-      <ToDo />
-    </div>
-  )
-}
+// function App(){
+//   return (
+//     <div>
+//       <ToDo />
+//     </div>
+//   )
+// }
 
 // jsx with curly braces
 // function App() {
