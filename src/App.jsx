@@ -70,15 +70,15 @@ function App() {
     return a + b;
   }
 
-  function operation(a, b, op) {
-    if (op == "+") {
-      return a + b;
-    } else if (op == "-") {
-      return a - b;
-    } else {
-      return a * b;
-    }
-  }
+  // function operation(a, b, op) {
+  //   if (op == "+") {
+  //     return a + b;
+  //   } else if (op == "-") {
+  //     return a - b;
+  //   } else {
+  //     return a * b;
+  //   }
+  // }
   return (
     <div>
       <h1>JSX with curly braces</h1>
