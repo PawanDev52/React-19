@@ -1436,6 +1436,5 @@ import { SubjectName } from "./ContextData";
 //   );
 // }
 
-// react routing
 
 export default App;
