@@ -15,10 +15,10 @@ import { Alert } from "react-bootstrap";
 import { useRef } from "react";
 import { useFormStatus } from "react-dom";
 
-function App() {
-  const userName = "React Dev";
-  let x = 20;
-  let y = 30;
+// function App() {
+//   const userName = "React Dev";
+//   let x = 20;
+//   let y = 30;
 //   return (
 //     <>
 //       <h1>{userName}</h1>
@@ -30,13 +30,13 @@ function App() {
 // }
 
 // without jsx
-return createElement("div", {id:"rootDiv"}, "hellow");
+// return createElement("div", {id:"rootDiv"}, "hellow");
 
 // with jsx
 // return (
 //   <div className="rootDiv">Hello Div</div>
 // )
-}
+// }
 
 // jsx exercise
 // function App(){
@@ -181,24 +181,24 @@ import { SubjectName } from "./ContextData";
 // }
 
 // else if condition
-// function App() {
-//   const [count, setCount] = useState(0);
-//   return (
-//     <div>
-//       <h1>{count}</h1>
-//       <button onClick={() => setCount(count + 1)}>Counter</button>
-//       {
-//         count == 0 ? <h1>Condition 0</h1>
-//           : count == 1 ? <h1>Condition 1</h1>
-//             : count == 2 ? <h1>Condition 2</h1>
-//               : count == 3 ? <h1>Condition 3</h1>
-//                 : count == 4 ? <h1>Condition 4</h1>
-//                   : count == 5 ? <h1>Condition 5</h1>
-//                     : <h1>Other Condition</h1>
-//       }
-//     </div>
-//   )
-// }
+function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Counter</button>
+      {
+        count == 0 ? <h1>Condition 0</h1>
+          : count == 1 ? <h1>Condition 1</h1>
+            : count == 2 ? <h1>Condition 2</h1>
+              : count == 3 ? <h1>Condition 3</h1>
+                : count == 4 ? <h1>Condition 4</h1>
+                  : count == 5 ? <h1>Condition 5</h1>
+                    : <h1>Other Condition</h1>
+      }
+    </div>
+  )
+}
 
 // props
 // function App() {
