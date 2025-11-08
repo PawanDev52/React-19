@@ -29,7 +29,7 @@ function Skills() {
       <input onChange={handleSkills} type="checkbox" id="vue" value="vue" />
       <label htmlFor="vue">Vue</label>
 
-      <h1>{skills.toString()}</h1>
+      <h3>{skills.toString()}</h3>
     </div>
   );
 }
