@@ -352,48 +352,48 @@ import { SubjectName } from "./ContextData";
 // }
 
 // Handle radio and dropdown
-function App() {
-  const [gender, setGender] = useState("female");
-  const [city, setCity] = useState("delhi");
-  return (
-    <div>
-      <h1>Handle Radio and Dropdown</h1>
-      <h4>Select Gender</h4>
-      <input
-        type="radio"
-        onChange={(event) => setGender(event.target.value)}
-        checked={gender == "male"}
-        name="gender"
-        value={"male"}
-        id="male"
-      />
-      <label htmlFor="male">Male</label>
-      <input
-        type="radio"
-        onChange={(event) => setGender(event.target.value)}
-        checked={gender == "female"}
-        name="gender"
-        value={"female"}
-        id="female"
-      />
-      <label htmlFor="female">Female</label>
-      <h2>Selected Gender: {gender}</h2>
-      <br />
+// function App() {
+//   const [gender, setGender] = useState("female");
+//   const [city, setCity] = useState("delhi");
+//   return (
+//     <div>
+//       <h1>Handle Radio and Dropdown</h1>
+//       <h4>Select Gender</h4>
+//       <input
+//         type="radio"
+//         onChange={(event) => setGender(event.target.value)}
+//         checked={gender == "male"}
+//         name="gender"
+//         value={"male"}
+//         id="male"
+//       />
+//       <label htmlFor="male">Male</label>
+//       <input
+//         type="radio"
+//         onChange={(event) => setGender(event.target.value)}
+//         checked={gender == "female"}
+//         name="gender"
+//         value={"female"}
+//         id="female"
+//       />
+//       <label htmlFor="female">Female</label>
+//       <h2>Selected Gender: {gender}</h2>
+//       <br />
 
-      <h4>Select City</h4>
-      <select
-        onChange={(event) => setCity(event.target.value)}
-        defaultValue={"delhi"}
-      >
-        <option value="noida">Noida</option>
-        <option value="gurgaon">Gurgaon</option>
-        <option value="delhi">Delhi</option>
-        <option value="pune">Pune</option>
-      </select>
-      <h2>Selected City: {city}</h2>
-    </div>
-  );
-}
+//       <h4>Select City</h4>
+//       <select
+//         onChange={(event) => setCity(event.target.value)}
+//         defaultValue={"delhi"}
+//       >
+//         <option value="noida">Noida</option>
+//         <option value="gurgaon">Gurgaon</option>
+//         <option value="delhi">Delhi</option>
+//         <option value="pune">Pune</option>
+//       </select>
+//       <h2>Selected City: {city}</h2>
+//     </div>
+//   );
+// }
 
 // Loop in jsx
 // function App() {
@@ -491,31 +491,31 @@ function App() {
 // }
 
 // Practice Question - props
-// function App() {
-//   const [color, setColor] = useState("green");
-//   const [bgColor, setBgColor] = useState("red");
-//   return (
-//     <div>
-//       <h1>Clock color change with dropdown</h1>
-//       <span>Pick A Color: </span>
-//       <select value={color} onChange={(e) => setColor(e.target.value)}>
-//         <option value="red">Red</option>
-//         <option value="green">Green</option>
-//         <option value="blue">Blue</option>
-//         <option value="orange">Orange</option>
-//       </select>
-//       <br /> <br />
-//       <span>Pick A Background Color: </span>
-//       <select value={bgColor} onChange={(e) => setBgColor(e.target.value)}>
-//         <option value="red">Red</option>
-//         <option value="brown">Brown</option>
-//         <option value="pink">Pink</option>
-//         <option value="purple">Purple</option>
-//       </select>
-//       <Clock color={color} bgColor={bgColor} />
-//     </div>
-//   );
-// }
+function App() {
+  const [color, setColor] = useState("green");
+  const [bgColor, setBgColor] = useState("red");
+  return (
+    <div>
+      <h1>Clock color change with dropdown</h1>
+      <span>Pick A Color: </span>
+      <select value={color} onChange={(e) => setColor(e.target.value)}>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+      </select>
+      <br /> <br />
+      <span>Pick A Background Color: </span>
+      <select value={bgColor} onChange={(e) => setBgColor(e.target.value)}>
+        <option value="red">Red</option>
+        <option value="brown">Brown</option>
+        <option value="pink">Pink</option>
+        <option value="purple">Purple</option>
+      </select>
+      <Clock color={color} bgColor={bgColor} />
+    </div>
+  );
+}
 
 // Nested Looping
 // function App() {
