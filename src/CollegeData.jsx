@@ -11,13 +11,13 @@ const CollegeData = ({ college }) => {
         borderRadius: "10px",
       }}
     >
-      <h1>Name: {college.name}</h1>
+      <h3>Name: {college.name}</h3>
       <ul>
         <li>
-          <h2>City: {college.city}</h2>
+          <h3>City: {college.city}</h3>
         </li>
         <li>
-          <h2>Website: {college.website}</h2>
+          <h3>Website: {college.website}</h3>
         </li>
         <li>
           <Student student={college.student} />
