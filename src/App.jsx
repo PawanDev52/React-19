@@ -654,134 +654,134 @@ import { SubjectName } from "./ContextData";
 
 // handle props side effects with useEffect
 // and component life cycle
-function App() {
-  const [count, setCount] = useState(0);
-  const [data, setData] = useState(0);
-  const [display, setDisplay] = useState(true);
-
-  return (
-    <div>
-      {display ? <CounterUse count={count} data={data} /> : null}
-
-      <button onClick={() => setCount(count + 1)}>Count</button>
-      <button onClick={() => setData(data + 1)}>Data</button>
-      <button onClick={() => setDisplay(!display)}>Toggle</button>
-    </div>
-  );
-}
-
-// Inline styles
 // function App() {
-//   const cardStyle = {
-//     border: "1px solid #cccccc3b",
-//     width: "200px",
-//     boxShadow: "2px 2px 5px 0px #ccc",
-//     margin: "10px",
-//   };
+//   const [count, setCount] = useState(0);
+//   const [data, setData] = useState(0);
+//   const [display, setDisplay] = useState(true);
 
 //   return (
-//     <>
-//       <h1 style={{ color: "red" }}>Inline Styling in React</h1>
-//       <div style={{ display: "flex", flexWrap: "wrap" }}>
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
+//     <div>
+//       {display ? <CounterUse count={count} data={data} /> : null}
 
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-
-//         <div style={cardStyle}>
-//           <img
-//             style={{ width: "200px" }}
-//             src="https://www.w3schools.com/howto/img_avatar.png"
-//             alt=""
-//           />
-//           <div style={{ padding: "5px" }}>
-//             <h4>Peter Parker</h4>
-//             <p>Software Developer</p>
-//           </div>
-//         </div>
-//       </div>
-//     </>
+//       <button onClick={() => setCount(count + 1)}>Count</button>
+//       <button onClick={() => setData(data + 1)}>Data</button>
+//       <button onClick={() => setDisplay(!display)}>Toggle</button>
+//     </div>
 //   );
 // }
+
+// Inline styles
+function App() {
+  const cardStyle = {
+    border: "1px solid #cccccc3b",
+    width: "200px",
+    boxShadow: "2px 2px 5px 0px #ccc",
+    margin: "10px",
+  };
+
+  return (
+    <>
+      <h1 style={{ color: "red" }}>Inline Styling in React</h1>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+          <div style={{ padding: "5px" }}>
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 // Dynamic and Conditional Inline Style
 // function App() {
