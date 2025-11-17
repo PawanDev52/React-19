@@ -802,9 +802,9 @@ function App() {
 
   return (
     <>
-      <h1 style={{ color: "red" }}>
+      <h2 style={{ color: "red" }}>
         Dynamic and Conditional Inline Styling in React
-      </h1>
+      </h2>
       <button onClick={() => updateTheme("#ccc", "blue")}>Gray Theme</button>
       <button onClick={() => updateTheme("white", "black")}>
         Default Theme
