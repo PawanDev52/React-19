@@ -784,143 +784,113 @@ import { SubjectName } from "./ContextData";
 // }
 
 // Dynamic and Conditional Inline Style
-function App() {
-  const [cardStyle, setCardStyle] = useState({
-    border: "1px solid #cccccc3b",
-    width: "200px",
-    boxShadow: "2px 2px 5px 0px #ccc",
-    margin: "10px",
-  });
-
-  const [textColor, setTextColor] = useState("black");
-  const [grid, setGrid] = useState(true);
-
-  const updateTheme = (bgColor, textColor) => {
-    setCardStyle({ ...cardStyle, background: bgColor });
-    setTextColor(textColor);
-  };
-
-  return (
-    <>
-      <h2 style={{ color: "red" }}>
-        Dynamic and Conditional Inline Styling in React
-      </h2>
-      <button onClick={() => updateTheme("#ccc", "blue")}>Gray Theme</button>
-      <button onClick={() => updateTheme("white", "black")}>
-        Default Theme
-      </button>
-      <button onClick={() => setGrid(!grid)}>Toggle Grid</button>
-
-      <div style={{ display: grid ? "flex" : "block", flexWrap: "wrap" }}>
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px", color: textColor }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-// External style
 // function App() {
+//   const [cardStyle, setCardStyle] = useState({
+//     border: "1px solid #cccccc3b",
+//     width: "200px",
+//     boxShadow: "2px 2px 5px 0px #ccc",
+//     margin: "10px",
+//   });
+
+//   const [textColor, setTextColor] = useState("black");
+//   const [grid, setGrid] = useState(true);
+
+//   const updateTheme = (bgColor, textColor) => {
+//     setCardStyle({ ...cardStyle, background: bgColor });
+//     setTextColor(textColor);
+//   };
+
 //   return (
 //     <>
-//       <h1 className="heading">External style</h1>
-//       <div className="container">
-//         <div className="user-card">
-//           <div>
-//             <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-//           </div>
-//           <div className="text-wrap">
+//       <h2 style={{ color: "red" }}>
+//         Dynamic and Conditional Inline Styling in React
+//       </h2>
+//       <button onClick={() => updateTheme("#ccc", "blue")}>Gray Theme</button>
+//       <button onClick={() => updateTheme("white", "black")}>
+//         Default Theme
+//       </button>
+//       <button onClick={() => setGrid(!grid)}>Toggle Grid</button>
+
+//       <div style={{ display: grid ? "flex" : "block", flexWrap: "wrap" }}>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
 //             <h4>Peter Parker</h4>
 //             <p>Software Developer</p>
 //           </div>
 //         </div>
 
-//         <div className="user-card">
-//           <div>
-//             <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
 //           </div>
-//           <div className="text-wrap">
+//         </div>
+
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px", color: textColor }}>
 //             <h4>Peter Parker</h4>
 //             <p>Software Developer</p>
 //           </div>
@@ -929,6 +899,36 @@ function App() {
 //     </>
 //   );
 // }
+
+// External style
+function App() {
+  return (
+    <>
+      <h1 className="heading">External style</h1>
+      <div className="container">
+        <div className="user-card">
+          <div>
+            <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          </div>
+          <div className="text-wrap">
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+
+        <div className="user-card">
+          <div>
+            <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          </div>
+          <div className="text-wrap">
+            <h4>Peter Parker</h4>
+            <p>Software Developer</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 // CSS Modules
 // function App() {
