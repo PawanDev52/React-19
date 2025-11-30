@@ -623,34 +623,34 @@ import { SubjectName } from "./ContextData";
 
 // useEffect Hook
 // handle state side effects with useEffect
-// function App() {
-//   const [counter, setCounter] = useState(0);
-//   const [data, setData] = useState(0);
+function App() {
+  const [counter, setCounter] = useState(0);
+  const [data, setData] = useState(0);
 
-//   useEffect(() => {
-//     callOnce();
-//   }, []);
+  useEffect(() => {
+    callOnce();
+  }, []);
 
-//   useEffect(() => {
-//     counterFunction();
-//   }, [counter]);
+  useEffect(() => {
+    counterFunction();
+  }, [counter]);
 
-//   function counterFunction() {
-//     console.log("counterFunction", counter);
-//   }
+  function counterFunction() {
+    console.log("counterFunction", counter);
+  }
 
-//   function callOnce() {
-//     console.log("callonce function called");
-//   }
+  function callOnce() {
+    console.log("callonce function called");
+  }
 
-//   return (
-//     <div>
-//       <h1>useEffect Hook</h1>
-//       <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
-//       <button onClick={() => setData(data + 1)}>Data {data}</button>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <h1>useEffect Hook</h1>
+      <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
+      <button onClick={() => setData(data + 1)}>Data {data}</button>
+    </div>
+  );
+}
 
 // handle props side effects with useEffect
 // and component life cycle
@@ -901,34 +901,34 @@ import { SubjectName } from "./ContextData";
 // }
 
 // External style
-function App() {
-  return (
-    <>
-      <h1 className="heading">External style</h1>
-      <div className="container">
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+// function App() {
+//   return (
+//     <>
+//       <h1 className="heading">External style</h1>
+//       <div className="container">
+//         <div className="user-card">
+//           <div>
+//             <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+//           </div>
+//           <div className="text-wrap">
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div className="user-card">
-          <div>
-            <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-          </div>
-          <div className="text-wrap">
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+//         <div className="user-card">
+//           <div>
+//             <img className="img-style" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+//           </div>
+//           <div className="text-wrap">
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 // CSS Modules
 // function App() {
