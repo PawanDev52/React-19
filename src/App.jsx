@@ -518,139 +518,139 @@ import { SubjectName } from "./ContextData";
 // }
 
 // Nested Looping
-// function App() {
-//   const collegeData = [
-//     {
-//       name: "IITM",
-//       city: "Delhi",
-//       website: "www.iitm.com",
-//       student: [
-//         {
-//           name: "peter",
-//           age: "26",
-//           email: "peter@test.com",
-//         },
-//         {
-//           name: "andrew",
-//           age: "36",
-//           email: "andrew@test.com",
-//         },
-//         {
-//           name: "mandy",
-//           age: "29",
-//           email: "mandy@test.com",
-//         },
-//       ],
-//     },
-//     {
-//       name: "IPU",
-//       city: "Noida",
-//       website: "www.ipu.com",
-//       student: [
-//         {
-//           name: "Sandy",
-//           age: "23",
-//           email: "sandy@test.com",
-//         },
-//         {
-//           name: "micky",
-//           age: "18",
-//           email: "micky@test.com",
-//         },
-//         {
-//           name: "max",
-//           age: "23",
-//           email: "max@test.com",
-//         },
-//       ],
-//     },
-//     {
-//       name: "ignou",
-//       city: "gurgaon",
-//       website: "www.ignou.com",
-//       student: [
-//         {
-//           name: "Neil",
-//           age: "27",
-//           email: "neil@test.com",
-//         },
-//         {
-//           name: "rocky",
-//           age: "25",
-//           email: "rocky@test.com",
-//         },
-//         {
-//           name: "Bob",
-//           age: "26",
-//           email: "bob@test.com",
-//         },
-//       ],
-//     },
-//     {
-//       name: "sol",
-//       city: "himachal",
-//       website: "www.iitm.com",
-//       student: [
-//         {
-//           name: "Jack",
-//           age: "31",
-//           email: "jack@test.com",
-//         },
-//         {
-//           name: "Candy",
-//           age: "24",
-//           email: "candy@test.com",
-//         },
-//         {
-//           name: "Joy",
-//           age: "26",
-//           email: "joy@test.com",
-//         },
-//       ],
-//     },
-//   ];
-//   return (
-//     <div>
-//       <h1>Nested Looping with Components</h1>
-//       {collegeData.map((college, index) => (
-//         <div key={index}>
-//           <CollegeData college={college} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// useEffect Hook
-// handle state side effects with useEffect
 function App() {
-  const [counter, setCounter] = useState(0);
-  const [data, setData] = useState(0);
-
-  useEffect(() => {
-    callOnce();
-  }, []);
-
-  useEffect(() => {
-    counterFunction();
-  }, [counter]);
-
-  function counterFunction() {
-    console.log("counterFunction", counter);
-  }
-
-  function callOnce() {
-    console.log("callonce function called");
-  }
-
+  const collegeData = [
+    {
+      name: "IITM",
+      city: "Delhi",
+      website: "www.iitm.com",
+      student: [
+        {
+          name: "peter",
+          age: "26",
+          email: "peter@test.com",
+        },
+        {
+          name: "andrew",
+          age: "36",
+          email: "andrew@test.com",
+        },
+        {
+          name: "mandy",
+          age: "29",
+          email: "mandy@test.com",
+        },
+      ],
+    },
+    {
+      name: "IPU",
+      city: "Noida",
+      website: "www.ipu.com",
+      student: [
+        {
+          name: "Sandy",
+          age: "23",
+          email: "sandy@test.com",
+        },
+        {
+          name: "micky",
+          age: "18",
+          email: "micky@test.com",
+        },
+        {
+          name: "max",
+          age: "23",
+          email: "max@test.com",
+        },
+      ],
+    },
+    {
+      name: "ignou",
+      city: "gurgaon",
+      website: "www.ignou.com",
+      student: [
+        {
+          name: "Neil",
+          age: "27",
+          email: "neil@test.com",
+        },
+        {
+          name: "rocky",
+          age: "25",
+          email: "rocky@test.com",
+        },
+        {
+          name: "Bob",
+          age: "26",
+          email: "bob@test.com",
+        },
+      ],
+    },
+    {
+      name: "sol",
+      city: "himachal",
+      website: "www.iitm.com",
+      student: [
+        {
+          name: "Jack",
+          age: "31",
+          email: "jack@test.com",
+        },
+        {
+          name: "Candy",
+          age: "24",
+          email: "candy@test.com",
+        },
+        {
+          name: "Joy",
+          age: "26",
+          email: "joy@test.com",
+        },
+      ],
+    },
+  ];
   return (
     <div>
-      <h1>useEffect Hook</h1>
-      <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
-      <button onClick={() => setData(data + 1)}>Data {data}</button>
+      <h1>Nested Looping with Components</h1>
+      {collegeData.map((college, index) => (
+        <div key={index}>
+          <CollegeData college={college} />
+        </div>
+      ))}
     </div>
   );
 }
+
+// useEffect Hook
+// handle state side effects with useEffect
+// function App() {
+//   const [counter, setCounter] = useState(0);
+//   const [data, setData] = useState(0);
+
+//   useEffect(() => {
+//     callOnce();
+//   }, []);
+
+//   useEffect(() => {
+//     counterFunction();
+//   }, [counter]);
+
+//   function counterFunction() {
+//     console.log("counterFunction", counter);
+//   }
+
+//   function callOnce() {
+//     console.log("callonce function called");
+//   }
+
+//   return (
+//     <div>
+//       <h1>useEffect Hook</h1>
+//       <button onClick={() => setCounter(counter + 1)}>Counter {counter}</button>
+//       <button onClick={() => setData(data + 1)}>Data {data}</button>
+//     </div>
+//   );
+// }
 
 // handle props side effects with useEffect
 // and component life cycle
