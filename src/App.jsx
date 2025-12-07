@@ -636,7 +636,7 @@ function App() {
   }, [counter]);
 
   function counterFunction() {
-    console.log("counterFunction", counter);
+    console.log("counterFunction ", counter);
   }
 
   function callOnce() {
