@@ -671,117 +671,117 @@ import { SubjectName } from "./ContextData";
 // }
 
 // Inline styles
-function App() {
-  const cardStyle = {
-    border: "1px solid #cccccc3b",
-    width: "200px",
-    boxShadow: "2px 2px 5px 0px #ccc",
-    margin: "10px",
-  };
+// function App() {
+//   const cardStyle = {
+//     border: "1px solid #cccccc3b",
+//     width: "200px",
+//     boxShadow: "2px 2px 5px 0px #ccc",
+//     margin: "10px",
+//   };
+  
+//   return (
+//     <>
+//       <h1 style={{ color: "red" }}>Inline Styling in React</h1>
+//       <div style={{ display: "flex", flexWrap: "wrap" }}>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-  return (
-    <>
-      <h1 style={{ color: "red" }}>Inline Styling in React</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
 
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-
-        <div style={cardStyle}>
-          <img
-            style={{ width: "200px" }}
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt=""
-          />
-          <div style={{ padding: "5px" }}>
-            <h4>Peter Parker</h4>
-            <p>Software Developer</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+//         <div style={cardStyle}>
+//           <img
+//             style={{ width: "200px" }}
+//             src="https://www.w3schools.com/howto/img_avatar.png"
+//             alt=""
+//           />
+//           <div style={{ padding: "5px" }}>
+//             <h4>Peter Parker</h4>
+//             <p>Software Developer</p>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 // Dynamic and Conditional Inline Style
 // function App() {
@@ -1200,31 +1200,31 @@ function App() {
 // }
 
 // Derived State
-// function App() {
-//   const [users, setUsers] = useState([]);
-//   const [user, setUser] = useState("");
-//   const handleAddUsers = () => {
-//     setUsers([...users, user]);
-//     setUser("");
-//   };
-//   const total = users.length;
-//   const last = users[users.length - 1];
-//   const unique = [...new Set(users)].length;
+function App() {
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState("");
+  const handleAddUsers = () => {
+    setUsers([...users, user]);
+    setUser("");
+  };
+  const total = users.length;
+  const last = users[users.length - 1];
+  const unique = [...new Set(users)].length;
 
-//   return (
-//     <div>
-//       <h3>Total Users: {total}</h3>
-//       <h3>Last User: {last}</h3>
-//       <h3>Total Unique Users: {unique}</h3>
+  return (
+    <div>
+      <h3>Total Users: {total}</h3>
+      <h3>Last User: {last}</h3>
+      <h3>Total Unique Users: {unique}</h3>
 
-//       <input type="text" value={user} onChange={(e) => setUser(e.target.value)} placeholder="add new user" />
-//       <button onClick={handleAddUsers}>Add User</button>
-//       {users.map((item, index) => (
-//         <h4 key={index}>{item}</h4>
-//       ))}
-//     </div>
-//   );
-// }
+      <input type="text" value={user} onChange={(e) => setUser(e.target.value)} placeholder="add new user" />
+      <button onClick={handleAddUsers}>Add User</button>
+      {users.map((item, index) => (
+        <h4 key={index}>{item}</h4>
+      ))}
+    </div>
+  );
+}
 
 // Lifting State
 // function App() {
