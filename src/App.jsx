@@ -1200,42 +1200,42 @@ import { SubjectName } from "./ContextData";
 // }
 
 // Derived State
-function App() {
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState("");
-  const handleAddUsers = () => {
-    setUsers([...users, user]);
-    setUser("");
-  };
-  const total = users.length;
-  const last = users[users.length - 1];
-  const unique = [...new Set(users)].length;
-
-  return (
-    <div>
-      <h3>Total Users: {total}</h3>
-      <h3>Last User: {last}</h3>
-      <h3>Total Unique Users: {unique}</h3>
-
-      <input type="text" value={user} onChange={(e) => setUser(e.target.value)} placeholder="add new user" />
-      <button onClick={handleAddUsers}>Add User</button>
-      {users.map((item, index) => (
-        <h4 key={index}>{item}</h4>
-      ))}
-    </div>
-  );
-}
-
-// Lifting State
 // function App() {
+//   const [users, setUsers] = useState([]);
 //   const [user, setUser] = useState("");
+//   const handleAddUsers = () => {
+//     setUsers([...users, user]);
+//     setUser("");
+//   };
+//   const total = users.length;
+//   const last = users.length ? users[users.length - 1] : 'No users yet';
+//   const unique = [...new Set(users)].length;
+
 //   return (
 //     <div>
-//       <AddUser addUser={setUser} />
-//       <DisplayUser displayUser={user} />
+//       <h3>Total Users: {total}</h3>
+//       <h3>Last User: {last}</h3>
+//       <h3>Total Unique Users: {unique}</h3>
+
+//       <input type="text" value={user} onChange={(e) => setUser(e.target.value)} placeholder="add new user" />
+//       <button onClick={handleAddUsers}>Add User</button>
+//       {users.map((item, index) => (
+//         <h4 key={index}>{item}</h4>
+//       ))}
 //     </div>
 //   );
 // }
+
+// Lifting State
+function App() {
+  const [user, setUser] = useState("");
+  return (
+    <div>
+      <AddUser addUser={setUser} />
+      <DisplayUser displayUser={user} />
+    </div>
+  );
+}
 
 // Update Object in State
 // function App() {
