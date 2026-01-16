@@ -1227,15 +1227,15 @@ import { SubjectName } from "./ContextData";
 // }
 
 // Lifting State
-function App() {
-  const [user, setUser] = useState("");
-  return (
-    <div>
-      <AddUser addUser={setUser} />
-      <DisplayUser displayUser={user} />
-    </div>
-  );
-}
+// function App() {
+//   const [user, setUser] = useState("");
+//   return (
+//     <div>
+//       <AddUser addUser={setUser} />
+//       <DisplayUser displayUser={user} />
+//     </div>
+//   );
+// }
 
 // Update Object in State
 // function App() {
@@ -1416,25 +1416,25 @@ function App() {
 //   );
 // }
 
-// function App() {
-//   const [subject, setSubject] = useState("");
-//   return (
-//     <div style={{ background: "yellow", padding: "20px" }}>
-//       <SubjectName.Provider value={subject}>
-//         <select value={subject} onChange={(event) => setSubject(event.target.value)} >
-//           <option value="">Select Subject</option>
-//           <option value="Maths">Maths</option>
-//           <option value="Science">Science</option>
-//           <option value="History">History</option>
-//           <option value="English">English</option>
-//         </select>
-//         <h1>Context API</h1>
-//         <button onClick={() => setSubject("")}>Clear Subject</button>
-//         <CollegeContext />
-//       </SubjectName.Provider>
-//     </div>
-//   );
-// }
+function App() {
+  const [subject, setSubject] = useState("");
+  return (
+    <div style={{ background: "yellow", padding: "20px" }}>
+      <SubjectName.Provider value={subject}>
+        <select value={subject} onChange={(event) => setSubject(event.target.value)} >
+          <option value="">Select Subject</option>
+          <option value="Maths">Maths</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+          <option value="English">English</option>
+        </select>
+        <h1>Context API</h1>
+        <button onClick={() => setSubject("")}>Clear Subject</button>
+        <CollegeContext />
+      </SubjectName.Provider>
+    </div>
+  );
+}
 
 // react routing
 
